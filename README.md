@@ -1,68 +1,79 @@
-# Assignment #4: Books API
-This repository contains your starter code for the Books API assignment.
+# Books REST API
 
-## Getting Started
-1. Clone this repository to your local machine
-2. Navigate to the project directory
-3. Install dependencies:
-   ```bash
-   npm install
-   ```
+A RESTful API built with Node.js and Express for managing a collection of books. The project demonstrates CRUD operations, RESTful routing, JSON data handling, and automated API testing using Jest and Supertest.
 
-## Assignment Overview
-You will build a complete RESTful API for a bookstore inventory management system:
-- **server.js** - Express.js server with full CRUD operations for book management
-- **tests/api.test.js** - Comprehensive Jest tests for all API endpoints
+The project includes:
 
-## Pre-installed Dependencies
-This repository comes with the following packages already configured:
-- `express` - Web framework for Node.js
-- `jest` - Testing framework
-- `supertest` - HTTP assertion library for testing APIs
+- RESTful book management API
+- Full CRUD operations
+- Automated API testing
+- Express.js backend
 
-## Sample Data
-Your repository includes a starter book inventory in `server.js`:
-```javascript
-const books = [
-  { id: 1, title: "The Great Gatsby", author: "F. Scott Fitzgerald", year: 1925, genre: "Fiction" },
-  { id: 2, title: "To Kill a Mockingbird", author: "Harper Lee", year: 1960, genre: "Fiction" },
-  { id: 3, title: "1984", author: "George Orwell", year: 1949, genre: "Dystopian Fiction" }
-];
+## Features
+
+- Retrieve all books
+- Retrieve a book by ID
+- Create new books
+- Update existing books
+- Delete books
+- JSON request and response handling
+- RESTful API architecture
+- Automated endpoint testing with Jest and Supertest
+
+## Technologies Used
+
+- Node.js
+- JavaScript
+- Express.js
+- Jest
+- Supertest
+- Git & GitHub
+
+## 📂 Project Structure
+
+```text
+books-rest-api
+│
+├── tests
+│   └── api.test.js
+│
+├── node_modules
+│
+├── .gitignore
+├── package.json
+├── package-lock.json
+├── server.js
+└── README.md
 ```
 
-## API Endpoints to Implement
-- `GET /api/books` - Retrieve all books
-- `GET /api/books/:id` - Retrieve a specific book by ID
-- `POST /api/books` - Add a new book
-- `PUT /api/books/:id` - Update an existing book
-- `DELETE /api/books/:id` - Remove a book
+## API Endpoints
 
-## Running the Server
-Start your development server:
-```bash
-npm start
-```
-Your API will be available at `http://localhost:3000`
+| Method | Endpoint | Description |
+|---------|----------|-------------|
+| GET | `/` | API information |
+| GET | `/api/books` | Retrieve all books |
+| GET | `/api/books/:id` | Retrieve a book by ID |
+| POST | `/api/books` | Create a new book |
+| PUT | `/api/books/:id` | Update a book |
+| DELETE | `/api/books/:id` | Delete a book |
 
 ## Testing
-Run your automated tests:
+
+The project includes automated API tests covering:
+
+- Retrieve all books
+- Retrieve a single book
+- Create a new book
+- Update an existing book
+- Delete a book
+- Error handling for invalid requests
+
+Run the test suite with:
+
 ```bash
 npm test
 ```
 
-## File Structure
-```
-server.js
-tests/
-└── api.test.js
-package.json
-README.md
-```
+## About
 
-## Key Learning Objectives
-- Build RESTful APIs using Express.js with proper HTTP methods
-- Implement full CRUD operations (Create, Read, Update, Delete)
-- Handle HTTP status codes and error responses appropriately
-- Test API endpoints using Jest and Supertest
-- Understand the request-response model in backend applications
-- Apply REST architectural principles to API design
+A RESTful API built with Node.js and Express for managing books through CRUD operations. The project includes automated API testing with Jest and Supertest, demonstrating REST architecture and backend development fundamentals.
